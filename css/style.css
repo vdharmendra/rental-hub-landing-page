@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containers{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.left-container{
+    background-color: black;
+    height: 100%;
+    width: 30%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* right container css */
+.right-container{
+    position: relative;
+    background-color: white;
+    height: 100%;
+    width: 70vw;
+   
+}
+.center-container{
+    position: absolute;
+    top: 25vh;left: 15vh;height: 50vh;width: 40vw;
+    background-image: url('./../img/heroBanner.png');
+    background-size: cover;
+    box-shadow: 7px 29px 49px 0px rgba(0,0,0,0.5);
+}
+
+.logo{
+    padding: 3rem;
+    font-size: 2rem;
+    font-family: 'helvetica';
+}
+.info{
+    display: flex;
+    padding: 3rem;
+    font-size: 1rem;
+}
+.info a{
+    text-decoration: none;
+    margin-left: 1rem;
+    color: white;
+}
+
+.story{
+    position: absolute;
+    height: 40%;
+    left: 30vw;
+    top: 30vh;
+    /* z-index: 2; */
+}
+.story h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-family: 'helvetica';
+    font-weight: 900;
+}
+.story p{
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    padding-right:18rem ;
+}
+
+.story p:nth-child(3){
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'helvetica';
+    cursor: pointer;
+}
+.menu-container{
+    position: absolute;
+    top: 3rem;right: 4rem;width: 50px;height: 45px;
+    cursor: pointer;
+
+}
+.menu, .menu:after, .menu:before{
+    width: 50px;
+    height: 5px;
+    border-radius: 50rem;
+}
+
+.menu{
+    position: absolute;
+    transform: translateY(20px);
+    background-color: black;
+    
+}
+.menu:before{
+    content: '';
+    position: absolute;
+    left: 0;bottom: 15px;
+    background-color: black;
+}
+.menu:after{
+    content: '';
+    position: absolute;
+    left: 0;top: 15px;
+    background-color: black;
+}
+.social-container{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+.social{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 15rem;
+}
+ul.social{
+    margin-right: 1rem;
+    font-weight: 700;
+    font-family: 'helvetica';
+}
+ul.social li{
+    cursor: pointer;
+}
+.first-block{
+    position: absolute;
+    width: 0%;
+    height: 200vh;
+    background-color: #000;
+    animation: go-left 4s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    left: 0;
+}
+@keyframes go-left {
+    0%{
+        left: 0;
+        width: 0%;
+    }50%{
+        left: 0;
+        width: 100%;
+    }100%{
+        left: 0;
+        width: 0%;
+    }
+}
